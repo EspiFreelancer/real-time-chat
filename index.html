@@ -62,13 +62,35 @@
 
 	</div>
 
+
+	<!-- The core Firebase JS SDK is always required and must be listed first -->
+	<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+
+	<!-- SDKs for Firebase Firestore-->
+	<script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-firestore.js"></script>
+
+    <script>
+	  // Your web app's Firebase configuration
+	  var firebaseConfig = {
+	  	apiKey: "AIzaSyACdqsIa2RgPrqG04_9CwHC8sXeZUZ9TI0",
+	  	authDomain: "realtimechat-7cc35.firebaseapp.com",
+	  	projectId: "realtimechat-7cc35",
+	  	storageBucket: "realtimechat-7cc35.appspot.com",
+	  	messagingSenderId: "253663163135",
+	  	appId: "1:253663163135:web:1b931581063843621e92ca"
+	  };
+	  // Initialize Firebase
+	  firebase.initializeApp(firebaseConfig);
+	  const db = firebase.firestore();
+	</script>
+
 	<!-- jQuery and Bootstrap Bundle -->
 	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 
 	<!-- Chat app scripts -->
 	<script src="scripts/chat.js"></script>
-	<script src="scripts/ui.js"></script>
-	<script src="scripts/app.js"></script>
+	<!-- <script src="scripts/ui.js"></script> -->
+	<!-- <script src="scripts/app.js"></script> -->
 </body>
 </html>
