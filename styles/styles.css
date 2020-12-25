@@ -1,0 +1,18 @@
+.container {
+	max-width: 750px;
+}
+
+.btn {
+	background-color: rgb(80, 250, 196);
+}
+
+.btn:hover,
+.btn:active {
+	background-color: rgb(61, 227, 111);
+	color: #fff;
+	transition: all 0.2s;
+}
+
+.btn:focus {
+	box-shadow: none;
+}
