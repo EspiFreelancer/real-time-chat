@@ -16,3 +16,12 @@
 .btn:focus {
 	box-shadow: none;
 }
+
+.username {
+	font-weight: bold;
+}
+
+.time {
+	font-size: 0.6em;
+	color: #9b9b9b;
+}

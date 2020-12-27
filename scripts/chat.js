@@ -50,25 +50,3 @@ class Chatroom {
 		}
 	}
 }
-
-const chatroom = new Chatroom('Música', 'José');
-// console.log(chatroom);
-
-// chatroom.addChat('Los Enanitos Verdes me gustan mucho')
-// 	.then(() => console.log('mensaje de chat agregado'))
-// 	.catch(err => console.log(err));
-
-chatroom.getChats(data => {
-	console.log(data);
-});
-
-
-// Channel change test
-// setTimeout(() => {
-// 	chatroom.updateChannel('General');
-// 	chatroom.updateUsername('Marcelo');
-// 	chatroom.getChats(data => {
-// 		console.log(data);
-// 	});
-// 	chatroom.addChat('Hola a todos');
-// }, 3000);
