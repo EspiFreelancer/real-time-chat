@@ -39,6 +39,7 @@ class Chatroom {
 	// update username
 	updateUsername(username) {
 		this.username = username;
+		localStorage.setItem('username', this.username);
 	}
 
 	// update channel, unsubscribe from changes.
