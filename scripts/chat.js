@@ -45,7 +45,6 @@ class Chatroom {
 	// update channel, unsubscribe from changes.
 	updateChannel(channel) {
 		this.channel = channel;
-		console.log('channel updated');
 		if (this.unsubscribe) {
 			this.unsubscribe();
 		}

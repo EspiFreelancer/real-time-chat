@@ -16,12 +16,15 @@ const messageUpdate = document.querySelector('.update-message');
 let username = localStorage.username ? localStorage.username : 'Anonimo_' 
 	+ Math.floor((Math.random() * 10001)); 
 
+// to change chats rooms
+const channels = document.querySelector ('.chat-rooms');
+
 
 
 /* Class instances */
 
 // default user and default chat room
-const chatroom = new Chatroom('General', username);
+const chatroom = new Chatroom('general', username);
 
 // instance of the class that generates the chat list
 const chatUI = new ChatUI(chatList);
@@ -30,7 +33,6 @@ const chatUI = new ChatUI(chatList);
 
 // get chats and render to the DOM
 chatroom.getChats(data => {
-	// console.log(data);
 	chatUI.render(data);
 });
 
@@ -54,3 +56,12 @@ newUsernameForm.addEventListener('submit', e => {
 	messageUpdate.innerText = `Nombre de usuario actualizado a ${newUsername}`;
 	setTimeout(() => messageUpdate.innerText = '', 3000);
 });
+
+// update channel
+channels.addEventListener('click', e => {
+	if(e.target.tagName === 'BUTTON'){
+		chatUI.clear();
+		chatroom.updateChannel(e.target.getAttribute('id'));
+		chatroom.getChats(chat => chatUI.render(chat)); // chat is data to render in DOM
+	}
+})
